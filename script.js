@@ -93,10 +93,10 @@ const clientAge = (2023 - clienBirthYear);
     // Ако потребителя е ПЪЛНОЛЕТЕН, числото в картата е 0.
 
 if(clientAge < 18) {
-    const motherBirthYear             = prompt("През коя година е родена майка ти?");
-    const motherBirthYearLastDigit    = motherBirthYear % 10;
-    const fatherBirthYear             = prompt("През коя година е роден баща ти?");
-    const fatherBirthYearLastDigit    = fatherBirthYear % 10;
+    var motherBirthYear             = prompt("През коя година е родена майка ти?");
+    var motherBirthYearLastDigit    = motherBirthYear % 10;
+    var fatherBirthYear             = prompt("През коя година е роден баща ти?");
+    var fatherBirthYearLastDigit    = fatherBirthYear % 10;
     
     if(motherBirthYearLastDigit == fatherBirthYearLastDigit) {
         var thirdDigit = motherBirthYearLastDigit;
@@ -228,12 +228,12 @@ console.log(`Fifth digit: ${fifthDigit}`);
 // 6
 // Сборът от тези цифри е 26. Прилагаме принципа на нумерологията и събираме 2 и 6, резултатът е 8. Значи шестата цифра е със стойност 8.
 
-const sixthNumber = firstDigit + secondDigit + thirdDigit + fourthNumber + fifthDigit;
+var sixthNumber = firstDigit + secondDigit + thirdDigit + fourthNumber + fifthDigit;
 
 if(sixthNumber > 9) {
-    const firstDigitSixthNumber   = parseInt(sixthNumber/10);
-    const lastDigitSixthNumber    = sixthNumber % 10;
-    const sixthNumber = firstDigitSixthNumber + lastDigitSixthNumber;
+    var firstDigitSixthNumber   = parseInt(sixthNumber/10);
+    var lastDigitSixthNumber    = sixthNumber % 10;
+    var sixthNumber = firstDigitSixthNumber + lastDigitSixthNumber;
 }
 console.log(`Sixth digit: ${sixthNumber}`)
 
