@@ -22,7 +22,7 @@
 
 var clienBirthYear = prompt("През коя година си роден?");
 console.log(clienBirthYear);
-const clientAge = 2023 - clienBirthYear;
+var clientAge = 2023 - clienBirthYear;
 
     while(clienBirthYear != 1965) {
 
@@ -42,8 +42,12 @@ const clientAge = 2023 - clienBirthYear;
         if(clienBirthYear > 1965) {
             console.log("Nad 1965");
         }
+
+        if(clienBirthYear == 1965) {
+            var firstDigit == 0;
+            console.log(`First digit: ${firstDigit}`);
+        }
     }
 
-    firstDigit == 0;
-    console.log(`First digit: ${firstDigit}`);
+    
     
