@@ -19,9 +19,9 @@
 
 // ако резултата е двуцифрено число, вземете само първата цифра от него.
 
-var clienBirthYear = prompt("През коя година си роден?");
+const clienBirthYear = prompt("През коя година си роден?");
 console.log(clienBirthYear);
-var clientAge = (2023 - clienBirthYear);
+const clientAge = (2023 - clienBirthYear);
 
         if(clienBirthYear < 1965) {
             do {
@@ -68,15 +68,15 @@ var clientAge = (2023 - clienBirthYear);
     const clientSex = prompt(`Какъв пол си? Отговори с "Мъж", "Жена" или "Не казвам"`);
 
     if(clientSex == "Мъж") {
-        var secondDigit = 1;
+        const secondDigit = 1;
         console.log(`Second digit: ${secondDigit}`)
     }
     else if(clientSex == "Жена") {
-        var secondDigit = 3;
+        const secondDigit = 3;
         console.log(`Second digit: ${secondDigit}`)
     }
     else {
-        var secondDigit = Math.ceil(Math.random()*(9 - 1) + 1);
+        const secondDigit = Math.ceil(Math.random()*(9 - 1) + 1);
         console.log(`Second digit: ${secondDigit}`)
     }
 
@@ -93,23 +93,23 @@ var clientAge = (2023 - clienBirthYear);
     // Ако потребителя е ПЪЛНОЛЕТЕН, числото в картата е 0.
 
 if(clientAge < 18) {
-    var motherBirthYear             = prompt("През коя година е родена майка ти?");
-    var motherBirthYearLastDigit    = motherBirthYear % 10;
-    var fatherBirthYear             = prompt("През коя година е роден баща ти?");
-    var fatherBirthYearLastDigit    = fatherBirthYear % 10;
+    const motherBirthYear             = prompt("През коя година е родена майка ти?");
+    const motherBirthYearLastDigit    = motherBirthYear % 10;
+    const fatherBirthYear             = prompt("През коя година е роден баща ти?");
+    const fatherBirthYearLastDigit    = fatherBirthYear % 10;
     
     if(motherBirthYearLastDigit == fatherBirthYearLastDigit) {
-        var thirdDigit = motherBirthYearLastDigit;
+        const thirdDigit = motherBirthYearLastDigit;
         console.log(`Third digit: ${motherBirthYearLastDigit}`);
     }
     if(motherBirthYearLastDigit !== fatherBirthYearLastDigit) {
-        var thirdDigit = fatherBirthYearLastDigit;
+        const thirdDigit = fatherBirthYearLastDigit;
         console.log(`Third digit: ${fatherBirthYearLastDigit}`);
     }
 }
 
 if(clientAge >= 18) {
-    var thirdDigit = 0;
+    const thirdDigit = 0;
     console.log(`Third digit: ${thirdDigit}`)
 }
 
@@ -134,41 +134,41 @@ if(clientAge >= 18) {
 // от 35 до 39,99	наднормено - затлъстял	    генерираме цифра - 7
 // от 40 и нагоре	наднормено - мега затлъстял	генерираме цифра - 8
 
-var clientHeight = prompt("Вашата височина в сантиметри:");
-var clientWeigtht = prompt("Вашето тегло в килограми");
+const clientHeight = prompt("Вашата височина в сантиметри:");
+const clientWeigtht = prompt("Вашето тегло в килограми");
 
-var clientBMI = clientWeigtht/(clientHeight*clientHeight);
+const clientBMI = clientWeigtht/(clientHeight*clientHeight);
 
 if(clientBMI < 16) {
-    var fourthNumber = 1;
+    const fourthNumber = 1;
     console.log(`Fourth number: ${fourthNumber}`);
 }
 if(clientBMI >= 16 && clientBMI <= 16.99) {
-    var fourthNumber = 2;
+    const fourthNumber = 2;
     console.log(`Fourth number: ${fourthNumber}`)
 }
 if(clientBMI >= 17 && clientBMI <= 18.49) {
-    var fourthNumber = 3;
+    const fourthNumber = 3;
     console.log(`Fourth number: ${fourthNumber}`)
 }
 if(clientBMI >= 18.5 && clientBMI <= 24.99) {
-    var fourthNumber = 4;
+    const fourthNumber = 4;
     console.log(`Fourth number: ${fourthNumber}`)
 }
 if(clientBMI >= 25 && clientBMI <= 29.99) {
-    var fourthNumber = 5;
+    const fourthNumber = 5;
     console.log(`Fourth number: ${fourthNumber}`)
 }
 if(clientBMI >= 30 && clientBMI <= 34.99) {
-    var fourthNumber = 6;
+    const fourthNumber = 6;
     console.log(`Fourth number: ${fourthNumber}`)
 }
 if(clientBMI >= 35 && clientBMI <= 39.99) {
-    var fourthNumber = 7;
+    const fourthNumber = 7;
     console.log(`Fourth number: ${fourthNumber}`)
 }
 if(clientBMI >= 40) {
-    var fourthNumber = 8;
+    const fourthNumber = 8;
     console.log(`Fourth number: ${fourthNumber}`)
 }
 
@@ -187,26 +187,26 @@ if(clientBMI >= 40) {
     // 3 - често
 // Цифрата е сумата от позицията на избрания продукт и честотата на пазаруване
 // Пример: Избрали сме позиция 3. Цигари и алкохол - честота понякога - резултата е 3 + 2
-var clientFavProducts               = prompt(`Кой вид продукти най-много обичаш да консумираш? Отговори с ЦИФРА: 1 = плодове и зеленчуци; 2 = месо и месни продукти; 3 = цигари и алкохол; 4 = млечни продукти; 5 = захарни изделия`);
+const clientFavProducts               = prompt(`Кой вид продукти най-много обичаш да консумираш? Отговори с ЦИФРА: 1 = плодове и зеленчуци; 2 = месо и месни продукти; 3 = цигари и алкохол; 4 = млечни продукти; 5 = захарни изделия`);
 
 
 if(clientFavProducts == 1) {
-    var clientFavProductFrequency = prompt(`Колко често купувате плодове и зеленчуци? Отговори чрез "1" рядко, "2" понякога и "3" често`);
+    const clientFavProductFrequency = prompt(`Колко често купувате плодове и зеленчуци? Отговори чрез "1" рядко, "2" понякога и "3" често`);
 }
 else if(clientFavProducts == 2) {
-    var clientFavProductFrequency = prompt(`Колко често купувате месо и месни продукти? Отговори чрез "1" рядко, "2" понякога и "3" често`);
+    const clientFavProductFrequency = prompt(`Колко често купувате месо и месни продукти? Отговори чрез "1" рядко, "2" понякога и "3" често`);
 }
 else if(clientFavProducts == 3) {
-    var clientFavProductFrequency = prompt(`Колко често купувате цигари и алкохол? Отговори чрез "1" рядко, "2" понякога и "3" често`);
+    const clientFavProductFrequency = prompt(`Колко често купувате цигари и алкохол? Отговори чрез "1" рядко, "2" понякога и "3" често`);
 }
 else if(clientFavProducts == 4) {
-    var clientFavProductFrequency = prompt(`Колко често купувате млечни продукти? Отговори чрез "1" рядко, "2" понякога и "3" често`);
+    const clientFavProductFrequency = prompt(`Колко често купувате млечни продукти? Отговори чрез "1" рядко, "2" понякога и "3" често`);
 }
 else if(clientFavProducts == 5) {
-    var clientFavProductFrequency = prompt(`Колко често купувате захарни изделия? Отговори чрез "1" рядко, "2" понякога и "3" често`);
+    const clientFavProductFrequency = prompt(`Колко често купувате захарни изделия? Отговори чрез "1" рядко, "2" понякога и "3" често`);
 }
 
-fifthDigit = parseInt(clientFavProducts) + parseInt(clientFavProductFrequency);
+const fifthDigit = parseInt(clientFavProducts) + parseInt(clientFavProductFrequency);
 console.log(`Fifth digit: ${fifthDigit}`);
 
 // Шеста цифра
@@ -228,12 +228,12 @@ console.log(`Fifth digit: ${fifthDigit}`);
 // 6
 // Сборът от тези цифри е 26. Прилагаме принципа на нумерологията и събираме 2 и 6, резултатът е 8. Значи шестата цифра е със стойност 8.
 
-var sixthNumber = firstDigit + secondDigit + thirdDigit + fourthNumber + fifthDigit;
+const sixthNumber = firstDigit + secondDigit + thirdDigit + fourthNumber + fifthDigit;
 
 if(sixthNumber > 9) {
-    var firstDigitSixthNumber   = parseInt(sixthNumber/10);
-    var lastDigitSixthNumber    = sixthNumber % 10;
-    var sixthNumber = firstDigitSixthNumber + lastDigitSixthNumber;
+    const firstDigitSixthNumber   = parseInt(sixthNumber/10);
+    const lastDigitSixthNumber    = sixthNumber % 10;
+    const sixthNumber = firstDigitSixthNumber + lastDigitSixthNumber;
 }
 console.log(`Sixth digit: ${sixthNumber}`)
 
