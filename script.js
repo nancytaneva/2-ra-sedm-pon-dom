@@ -68,15 +68,15 @@ const clientAge = (2023 - clienBirthYear);
     const clientSex = prompt(`Какъв пол си? Отговори с "Мъж", "Жена" или "Не казвам"`);
 
     if(clientSex == "Мъж") {
-        const secondDigit = 1;
+        var secondDigit = 1;
         console.log(`Second digit: ${secondDigit}`)
     }
     else if(clientSex == "Жена") {
-        const secondDigit = 3;
+        var secondDigit = 3;
         console.log(`Second digit: ${secondDigit}`)
     }
     else {
-        const secondDigit = Math.ceil(Math.random()*(9 - 1) + 1);
+        var secondDigit = Math.ceil(Math.random()*(9 - 1) + 1);
         console.log(`Second digit: ${secondDigit}`)
     }
 
@@ -99,17 +99,17 @@ if(clientAge < 18) {
     const fatherBirthYearLastDigit    = fatherBirthYear % 10;
     
     if(motherBirthYearLastDigit == fatherBirthYearLastDigit) {
-        const thirdDigit = motherBirthYearLastDigit;
+        var thirdDigit = motherBirthYearLastDigit;
         console.log(`Third digit: ${motherBirthYearLastDigit}`);
     }
     if(motherBirthYearLastDigit !== fatherBirthYearLastDigit) {
-        const thirdDigit = fatherBirthYearLastDigit;
+        var thirdDigit = fatherBirthYearLastDigit;
         console.log(`Third digit: ${fatherBirthYearLastDigit}`);
     }
 }
 
 if(clientAge >= 18) {
-    const thirdDigit = 0;
+    var thirdDigit = 0;
     console.log(`Third digit: ${thirdDigit}`)
 }
 
