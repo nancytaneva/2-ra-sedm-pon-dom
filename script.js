@@ -189,33 +189,25 @@ if(clientBMI >= 40) {
 // Пример: Избрали сме позиция 3. Цигари и алкохол - честота понякога - резултата е 3 + 2
 var clientFavProducts               = prompt(`Кой вид продукти най-много обичаш да консумираш? Отговори с ЦИФРА: 1 = плодове и зеленчуци; 2 = месо и месни продукти; 3 = цигари и алкохол; 4 = млечни продукти; 5 = захарни изделия`);
 
-var fruitsAndVegFrequency           = prompt(`Колко често купувате плодове и зеленчуци? Отговори чрез "1" рядко, "2" понякога и "3" често`);
-var meatProductsFrequency           = prompt(`Колко често купувате месо и месни продукти? Отговори чрез "1" рядко, "2" понякога и "3" често`);
-var cigaretteAndAlcoholFrequency    = prompt(`Колко често купувате цигари и алкохол? Отговори чрез "1" рядко, "2" понякога и "3" често`);
-var milkProductsFrequency           = prompt(`Колко често купувате млечни продукти? Отговори чрез "1" рядко, "2" понякога и "3" често`);
-var sugarProductsFrequency          = prompt(`Колко често купувате захарни изделия? Отговори чрез "1" рядко, "2" понякога и "3" често`);
-
 
 if(clientFavProducts == 1) {
-    var clientFavProductFrequency = fruitsAndVegFrequency;
+    var clientFavProductFrequency = prompt(`Колко често купувате плодове и зеленчуци? Отговори чрез "1" рядко, "2" понякога и "3" често`);
 }
-if(clientFavProducts == 2) {
-    var clientFavProductFrequency = meatProductsFrequency;
+else if(clientFavProducts == 2) {
+    var clientFavProductFrequency = prompt(`Колко често купувате месо и месни продукти? Отговори чрез "1" рядко, "2" понякога и "3" често`);
 }
-if(clientFavProducts == 3) {
-    var clientFavProductFrequency = cigaretteAndAlcoholFrequency;
+else if(clientFavProducts == 3) {
+    var clientFavProductFrequency = prompt(`Колко често купувате цигари и алкохол? Отговори чрез "1" рядко, "2" понякога и "3" често`);
 }
-if(clientFavProducts == 4) {
-    var clientFavProductFrequency = milkProductsFrequency;
+else if(clientFavProducts == 4) {
+    var clientFavProductFrequency = prompt(`Колко често купувате млечни продукти? Отговори чрез "1" рядко, "2" понякога и "3" често`);
 }
-if(clientFavProducts == 5) {
-    var clientFavProductFrequency = sugarProductsFrequency;
+else if(clientFavProducts == 5) {
+    var clientFavProductFrequency = prompt(`Колко често купувате захарни изделия? Отговори чрез "1" рядко, "2" понякога и "3" често`);
 }
-else{
-    console.log(`Невалиден отговор`);
-}
-var fifthDigit = clientFavProducts + clientFavProductFrequency;
 
+fifthDigit = parseInt(clientFavProducts) + parseInt(clientFavProductFrequency);
+console.log(`Fifth digit: ${fifthDigit}`);
 
 // Шеста цифра
 // Шестата цифра е контролна, тя се подчинява на принципите на нумерологията и е резултат от сбора на всички предишни числа, сведени до едноцифрено такова.
@@ -236,7 +228,7 @@ var fifthDigit = clientFavProducts + clientFavProductFrequency;
 // 6
 // Сборът от тези цифри е 26. Прилагаме принципа на нумерологията и събираме 2 и 6, резултатът е 8. Значи шестата цифра е със стойност 8.
 
-var sixthNumber = firstDigit + secondDigit +thirdDigit + fourthNumber + fifthDigit;
+var sixthNumber = firstDigit + secondDigit + thirdDigit + fourthNumber + fifthDigit;
 
 if(sixthNumber > 9) {
     var firstDigitSixthNumber   = parseInt(sixthNumber/10);
