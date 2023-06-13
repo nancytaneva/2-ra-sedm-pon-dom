@@ -21,20 +21,30 @@
 
 
 var clienBirthYear = prompt("През коя година си роден?");
-console.log = (clienBirthYear);
+console.log(clienBirthYear);
 
 // ако е роден преди 1965:
-// if(clienBirthYear < 1965) {
-//     const clientAge = 2023 - clienBirthYear;
-//     const firstDigitRandomNumber = Math.ceil(Math.random()*(7 - 1) + 1);
+if(clienBirthYear < 1965) {
 
-//     if(firstDigitRandomNumber )
+        
+        const clientAge = 2023 - clienBirthYear;
+        var firstDigitRandomNumber = Math.ceil(Math.random()*(7 - 1) + 1);
+        var firstDigit = parseInt(Math.ceil(clientAge / firstDigitRandomNumber));
+    while(firstDigit) {
+            // if(firstDigit % 2 == 0) {
+            // }
+            if(firstDigit % 2 == 1) {
+            console.log(`First digit: ${firstDigit}`);
+            break;
+            }
+    }
+    
+}
+
+// ако е роден след 1965:
+// if(clienBirthYear > 1965) {
+//     firstDigit % 2 == 1;
 // }
-
-// // ако е роден след 1965:
-// // if(clienBirthYear > 1965) {
-// //     firstDigit % 2 == 1;
-// // }
 
 // // ако е роден през 1965:
 // if(firstDigit == 1965) {
