@@ -20,7 +20,8 @@
 // ако резултата е двуцифрено число, вземете само първата цифра от него.
 
 
-const clienBirthYear = prompt("През коя година си роден?");
+var clienBirthYear = prompt("През коя година си роден?");
+console.log = (clienBirthYear);
 
 // ако е роден преди 1965:
 // if(clienBirthYear < 1965) {
