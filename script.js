@@ -22,9 +22,7 @@
 
 var clienBirthYear = prompt("През коя година си роден?");
 console.log(clienBirthYear);
-var clientAge = 2023 - clienBirthYear;
-
-    while(clienBirthYear != 1965) {
+var clientAge = (2023 - clienBirthYear);
 
         if(clienBirthYear < 1965) {
             var firstDigitRandomNumber = Math.ceil(Math.random()*(7 - 1) + 1);
@@ -44,10 +42,10 @@ var clientAge = 2023 - clienBirthYear;
         }
 
         if(clienBirthYear == 1965) {
-            var firstDigit == 0;
+            var firstDigit = 0;
             console.log(`First digit: ${firstDigit}`);
         }
-    }
+
 
     
     
