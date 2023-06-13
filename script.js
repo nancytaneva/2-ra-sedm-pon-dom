@@ -143,7 +143,6 @@ if(clientBMI < 16) {
     var fourthNumber = 1;
     console.log(`Fourth number: ${fourthNumber}`);
 }
-
 if(clientBMI >= 16 && clientBMI <= 16.99) {
     var fourthNumber = 2;
     console.log(`Fourth number: ${fourthNumber}`)
@@ -172,3 +171,78 @@ if(clientBMI >= 40) {
     var fourthNumber = 8;
     console.log(`Fourth number: ${fourthNumber}`)
 }
+
+
+// Пета цифра
+// Петата цифра се определя от предпочитанията на потребителя, за стоки и услуги, на територията на магазина, както и честотата, с която те се консумират.
+// Дайте му възможност, чрез текстово съобщение, да избере от 5 вида стоки, които консумира. Имате избор между следните възможности:
+    // плодове и зеленчуци;
+    // месо и месни продукти;
+    // цигари и алкохол;
+    // млечни продукти;
+    // захарни изделия.
+// За всеки един от продуктите трябва да изберете колко често го купувате, като използвате скалата от 1 до 3:
+    // 1 - рядко
+    // 2 - понякога
+    // 3 - често
+// Цифрата е сумата от позицията на избрания продукт и честотата на пазаруване
+// Пример: Избрали сме позиция 3. Цигари и алкохол - честота понякога - резултата е 3 + 2
+var clientFavProducts               = prompt(`Кой вид продукти най-много обичаш да консумираш? Отговори с ЦИФРА: 1 = плодове и зеленчуци; 2 = месо и месни продукти; 3 = цигари и алкохол; 4 = млечни продукти; 5 = захарни изделия`);
+
+var fruitsAndVegFrequency           = prompt(`Колко често купувате плодове и зеленчуци? Отговори чрез "1" рядко, "2" понякога и "3" често`);
+var meatProductsFrequency           = prompt(`Колко често купувате месо и месни продукти? Отговори чрез "1" рядко, "2" понякога и "3" често`);
+var cigaretteAndAlcoholFrequency    = prompt(`Колко често купувате цигари и алкохол? Отговори чрез "1" рядко, "2" понякога и "3" често`);
+var milkProductsFrequency           = prompt(`Колко често купувате млечни продукти? Отговори чрез "1" рядко, "2" понякога и "3" често`);
+var sugarProductsFrequency          = prompt(`Колко често купувате захарни изделия? Отговори чрез "1" рядко, "2" понякога и "3" често`);
+
+
+if(clientFavProducts == 1) {
+    var clientFavProductFrequency = fruitsAndVegFrequency;
+}
+if(clientFavProducts == 2) {
+    var clientFavProductFrequency = meatProductsFrequency;
+}
+if(clientFavProducts == 3) {
+    var clientFavProductFrequency = cigaretteAndAlcoholFrequency;
+}
+if(clientFavProducts == 4) {
+    var clientFavProductFrequency = milkProductsFrequency;
+}
+if(clientFavProducts == 5) {
+    var clientFavProductFrequency = sugarProductsFrequency;
+}
+else{
+    console.log(`Невалиден отговор`);
+}
+var fifthDigit = clientFavProducts + clientFavProductFrequency;
+
+
+// Шеста цифра
+// Шестата цифра е контролна, тя се подчинява на принципите на нумерологията и е резултат от сбора на всички предишни числа, сведени до едноцифрено такова.
+
+// Пример - едноцифрено число Преди шеста цифра, потребителят е получил следните 5 цифри.
+// 1
+// 1
+// 1
+// 1
+// 2
+// Сборът на тези цифри е 6 . Значи шестата цифра е със стойност 6.
+
+// Пример - двуцифрено число Преди шеста цифра, потребителят е получил следните 5 цифри.
+// 5
+// 3
+// 8
+// 4
+// 6
+// Сборът от тези цифри е 26. Прилагаме принципа на нумерологията и събираме 2 и 6, резултатът е 8. Значи шестата цифра е със стойност 8.
+
+var sixthNumber = firstDigit + secondDigit +thirdDigit + fourthNumber + fifthDigit;
+
+if(sixthNumber > 9) {
+    var firstDigitSixthNumber   = parseInt(sixthNumber/10);
+    var lastDigitSixthNumber    = sixthNumber % 10;
+    var sixthNumber = firstDigitSixthNumber + lastDigitSixthNumber;
+}
+console.log(`Sixth digit: ${sixthNumber}`)
+
+console.log(`Card Number: ${firstDigit}${secondDigit}${thirdDigit}${fourthNumber}${fifthDigit}${sixthNumber}`);
