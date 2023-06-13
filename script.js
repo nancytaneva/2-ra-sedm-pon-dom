@@ -140,35 +140,35 @@ const clientWeigtht = prompt("Вашето тегло в килограми");
 const clientBMI = clientWeigtht/(clientHeight*clientHeight);
 
 if(clientBMI < 16) {
-    const fourthNumber = 1;
+    var fourthNumber = 1;
     console.log(`Fourth number: ${fourthNumber}`);
 }
 if(clientBMI >= 16 && clientBMI <= 16.99) {
-    const fourthNumber = 2;
+    var fourthNumber = 2;
     console.log(`Fourth number: ${fourthNumber}`)
 }
 if(clientBMI >= 17 && clientBMI <= 18.49) {
-    const fourthNumber = 3;
+    var fourthNumber = 3;
     console.log(`Fourth number: ${fourthNumber}`)
 }
 if(clientBMI >= 18.5 && clientBMI <= 24.99) {
-    const fourthNumber = 4;
+    var fourthNumber = 4;
     console.log(`Fourth number: ${fourthNumber}`)
 }
 if(clientBMI >= 25 && clientBMI <= 29.99) {
-    const fourthNumber = 5;
+    var fourthNumber = 5;
     console.log(`Fourth number: ${fourthNumber}`)
 }
 if(clientBMI >= 30 && clientBMI <= 34.99) {
-    const fourthNumber = 6;
+    var fourthNumber = 6;
     console.log(`Fourth number: ${fourthNumber}`)
 }
 if(clientBMI >= 35 && clientBMI <= 39.99) {
-    const fourthNumber = 7;
+    var fourthNumber = 7;
     console.log(`Fourth number: ${fourthNumber}`)
 }
 if(clientBMI >= 40) {
-    const fourthNumber = 8;
+    var fourthNumber = 8;
     console.log(`Fourth number: ${fourthNumber}`)
 }
 
